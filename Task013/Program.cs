@@ -1,5 +1,6 @@
 ﻿/*
-Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+Задача 13: Напишите программу, которая выводит третью цифру заданного числа или 
+сообщает, что третьей цифры нет.
 
 645 -> 5
 
@@ -7,7 +8,11 @@
 
 32679 -> 6
 */
-int number = new Random().Next(100, 999);
+int Number = new Random().Next(1, 1500);
+System.Console.WriteLine();
+System.Console.WriteLine($"Дано число: {Number}");
 
-System.Console.WriteLine($"Последней цифрой числа {number} является цифра {number%10}");
+if (Number / 100 > 0) System.Console.WriteLine($"Третьей цифрой числа {Number} является цифра {Number / 100 % 10}");
+else System.Console.WriteLine($"У числа {Number} нет третьей цифры");
+
 System.Console.WriteLine();
